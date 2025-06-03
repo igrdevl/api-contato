@@ -1,23 +1,29 @@
 {
-  "name": "api-contato",
+  "name": "contato-server",
   "version": "1.0.0",
+  "description": "Servidor backend para envio de formulário com reCAPTCHA",
   "main": "dist/contato.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/contato.js"
+    "start": "node dist/contato.js",
+    "dev": "ts-node-dev src/contato.ts"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "node-fetch": "^2.6.7",
-    "nodemailer": "^6.9.8",
-    "@types/node": "^20.11.19",
-    "@types/express": "^4.17.21",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.3"
+  },
+  "devDependencies": {
     "@types/body-parser": "^1.19.2",
     "@types/cors": "^2.8.13",
-    "@types/node-fetch": "^2.6.4",
-    "typescript": "^5.4.5"
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.6",
+    "@types/nodemailer": "^6.4.13",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
   }
 }
