@@ -1,0 +1,16 @@
+{
+  "name": "api-contato",
+  "version": "1.0.0",
+  "main": "contato.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node contato.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "nodemailer": "^6.9.8",
+    "body-parser": "^1.20.2"
+  }
+}
