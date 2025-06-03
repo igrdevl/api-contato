@@ -23,7 +23,7 @@ app.post("/api/contato", async (req, res) => {
   const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${recaptcha}`;
 
   const response = await fetch(verifyUrl, { method: "POST" });
-  const data = await response.json();
+  const data = (await response.json()) as { success: boolean };
 
   if (!data.success) {
     return res.status(403).json({ success: false, message: "Falha na verificação do reCAPTCHA" });
@@ -60,3 +60,5 @@ app.post("/api/contato", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
+
+export default app;
